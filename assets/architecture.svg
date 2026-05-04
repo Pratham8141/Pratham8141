@@ -1,40 +1,29 @@
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
 
   <style>
     .node { fill:#0D1117; stroke:#00D9FF; stroke-width:2; rx:8; }
-    .text { fill:#00D9FF; font-family: monospace; font-size:14px; text-anchor: middle; dominant-baseline: middle; }
-    .line { stroke:#00D9FF; stroke-width:2; }
+    .text { fill:#00D9FF; font-family: monospace; font-size:14px; text-anchor: middle; }
+    .line { stroke:#00D9FF; stroke-width:2; stroke-dasharray:5; }
   </style>
 
-  <!-- nodes -->
-  <rect x="50" y="90" width="100" height="40" class="node"/>
-  <text x="100" y="110" class="text">client</text>
+  <rect x="50" y="80" width="100" height="40" class="node"/>
+  <text x="100" y="105" class="text">client</text>
 
-  <rect x="200" y="90" width="100" height="40" class="node"/>
-  <text x="250" y="110" class="text">api</text>
+  <rect x="200" y="80" width="100" height="40" class="node"/>
+  <text x="250" y="105" class="text">api</text>
 
-  <rect x="350" y="90" width="100" height="40" class="node"/>
-  <text x="400" y="110" class="text">service</text>
+  <rect x="350" y="80" width="100" height="40" class="node"/>
+  <text x="400" y="105" class="text">service</text>
 
-  <rect x="500" y="90" width="100" height="40" class="node"/>
-  <text x="550" y="110" class="text">queue</text>
+  <rect x="500" y="80" width="100" height="40" class="node"/>
+  <text x="550" y="105" class="text">queue</text>
 
-  <rect x="650" y="90" width="100" height="40" class="node"/>
-  <text x="700" y="110" class="text">worker</text>
+  <rect x="650" y="80" width="100" height="40" class="node"/>
+  <text x="700" y="105" class="text">worker</text>
 
-  <!-- connections -->
-  <line x1="150" y1="110" x2="200" y2="110" class="line"/>
-  <line x1="300" y1="110" x2="350" y2="110" class="line"/>
-  <line x1="450" y1="110" x2="500" y2="110" class="line"/>
-  <line x1="600" y1="110" x2="650" y2="110" class="line"/>
-
-  <!-- moving packet -->
-  <circle r="5" fill="#00D9FF">
-    <animateMotion dur="3s" repeatCount="indefinite">
-      <mpath href="#path"/>
-    </animateMotion>
-  </circle>
-
-  <path id="path" d="M150 110 L700 110" fill="none"/>
+  <line x1="150" y1="100" x2="200" y2="100" class="line"/>
+  <line x1="300" y1="100" x2="350" y2="100" class="line"/>
+  <line x1="450" y1="100" x2="500" y2="100" class="line"/>
+  <line x1="600" y1="100" x2="650" y2="100" class="line"/>
 
 </svg>
