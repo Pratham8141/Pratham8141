@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:00D9FF&height=140&section=header&animation=fadeIn" width="100%"/>
+<img src="assets/banner.svg" width="100%"/>
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2500&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=booting+systems...;loading+modules:+saas,+chat,+ai...;initializing+real-time+infrastructure...;system+ready." />
+<img src="assets/boot.svg" width="100%"/>
 
 </div>
 
@@ -42,10 +42,8 @@ synapse ai
 
 llm interface with streaming responses
 
-🧠 system.flow
-client → api → auth → service → queue → worker → db
-                    ↓
-                  cache
+⚡ architecture
+<div align="center"> <img src="assets/architecture.svg" width="100%"/> </div>
 ⚡ core.principles
 systems fail → design for failure
 latency matters
@@ -57,6 +55,6 @@ async by default
 <div align="center"> <img src="https://github.com/Pratham8141/Pratham8141/blob/output/github-contribution-grid-snake-dark.svg"/> </div>
 <div align="center">
 
-building systems that scale.
+systems running. building continues.
 
-</div> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,100:0D1117&height=100&section=footer"/> ```
+</div> <img src="assets/banner.svg" width="100%"/> ```
