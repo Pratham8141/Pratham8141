@@ -2,6 +2,12 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:00D9FF&height=120&section=header&animation=fadeIn" width="100%"/>
 
+```
+> initializing profile...
+> loading modules: [systems] [infra] [realtime] [saas]
+> all systems nominal.
+```
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=36&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&width=800&lines=Pratham+Sharma)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=15&duration=2500&pause=1200&color=00D9FF&center=true&vCenter=true&width=900&lines=Systems+Engineer+%E2%80%A2+SaaS+Builder+%E2%80%A2+Real-Time+Infrastructure;Distributed+systems+by+design%2C+not+by+accident.;Building+backends+that+hold+under+pressure.)](https://git.io/typing-svg)
@@ -12,101 +18,166 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://pratham8141.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Pratham8141)
 
+<br/>
+
+```
+STATUS: ONLINE  |  BUILDING: ACTIVE  |  UPTIME: CONTINUOUS
+```
+
 </div>
 
 ---
 
-## `> system.profile`
+> **`[MODULE: SYSTEM_PROFILE]`**
 
 ```yaml
-name        : Pratham Sharma
-status      : Building in public — open to backend / systems engineering roles
-focus       : Event-driven architecture · Real-time systems · SaaS infrastructure
-stack       : React · Node.js · Python · PostgreSQL · Redis · WebSockets · Docker
-location    : India
+name     : Pratham Sharma
+status   : open to backend / systems engineering roles
+focus    : event-driven architecture · real-time systems · SaaS infra
+location : India
+```
+
+*I don't add scale later. I build for it the first time.*
+
+---
+
+> **`[MODULE: SYSTEM_METRICS]`**
+
+```
+  SYSTEMS DEPLOYED   →   5+        REAL-TIME FEATURES   →   8+
+  APIs DESIGNED      →   10+       ASYNC PIPELINES      →   4+
+  DB SCHEMAS OWNED   →   6+        INFRA COMPONENTS     →   12+
 ```
 
 ---
 
-## `> ls -la deployed/`
+> **`[MODULE: DEPLOYED_SYSTEMS]`**
 
-### `salez/` — Multi-Tenant SaaS CRM
+────────────────────────────────────────────────────────────
 
-> Full-stack CRM with isolated tenant workspaces, role-based access control, and live activity feeds.
+**`salez/`** — Multi-Tenant SaaS CRM
+`STATUS: PRODUCTION` · `ISOLATION: SCHEMA-LEVEL`
 
-Per-tenant data isolation enforced at the schema level in PostgreSQL. RBAC is evaluated at the query layer — not just middleware. The notification pipeline runs asynchronously, decoupled from the request cycle. Built to support multiple organizations under a single deployment without cross-tenant data bleed.
+Per-tenant isolation enforced at the schema level — not middleware. RBAC lives at the query layer. Notification pipeline fully async and decoupled from the request cycle. One deployment. Zero cross-tenant bleed.
 
 ```
 Stack: React · Node.js · PostgreSQL (schema-per-tenant) · Redis · JWT · Docker
 ```
 
----
+────────────────────────────────────────────────────────────
 
-### `food-delivery-platform/` — Fullstack Delivery System
+**`food-delivery-platform/`** — Fullstack Delivery System
+`STATUS: PRODUCTION` · `SURFACES: 3`
 
-> End-to-end food ordering system spanning mobile, web admin, and a real-time order state engine.
-
-Three client surfaces, one backend contract: a React Native (Expo) app for customers, a Next.js operator dashboard for restaurants, and Supabase handling data persistence with row-level security enforcing access boundaries. Order lifecycle managed via server-side state machine — no client trust on transitions. Deployed on Render with staging and production isolation.
+Three clients, one backend contract. Order lifecycle runs through a server-side state machine — no client trust on transitions. RLS enforces access boundaries at the data layer. Staging and production never touch.
 
 ```
 Stack: React Native (Expo) · Next.js · Supabase · PostgreSQL · RLS · Render · TypeScript
 ```
 
----
+────────────────────────────────────────────────────────────
 
-### `realtime-chat/` — WebSocket Messaging Infrastructure
+**`realtime-chat/`** — WebSocket Messaging Infrastructure
+`STATUS: ACTIVE` · `TRANSPORT: PERSISTENT WS`
 
-> Production-grade chat system with presence tracking, message reactions, typing indicators, and paginated history.
-
-Persistent WebSocket connections handle bi-directional message delivery with acknowledgment semantics. Typing indicators and online presence are managed via server-side event emission — no polling. Message history is paginated with cursor-based navigation to avoid full-table scans. Reactions stored as aggregated counts with per-user indexing.
+No polling. Presence and typing indicators via server-side event emission. Cursor-based pagination on history — no full-table scans. Reactions aggregated server-side with per-user indexing.
 
 ```
 Stack: Node.js · WebSockets · PostgreSQL · Redis · React · Docker
 ```
 
----
+────────────────────────────────────────────────────────────
 
-### `pdf-toolkit/` — Document Processing API
+**`pdf-toolkit/`** — Document Processing API
+`STATUS: ACTIVE` · `PROCESSING: IN-MEMORY`
 
-> REST API for PDF operations — merge, split, compress, extract text, watermark, and camera capture ingestion.
-
-Stateless service architecture: files stream in, are processed in-memory, and return directly — no persistent file storage, no side effects between requests. Camera capture flow converts mobile image input to PDF via server-side preprocessing. Heavy batch operations dispatched to a background worker queue with retry semantics.
+Stateless by design. Files stream in, process, and return — no disk writes, no shared state between requests. Heavy ops go to a background queue with retry semantics.
 
 ```
 Stack: Python · FastAPI · PyMuPDF · Celery · Redis · Docker
 ```
 
----
+────────────────────────────────────────────────────────────
 
-### `synapse-ai/` — LLM Application Frontend
+**`synapse-ai/`** — LLM Application Frontend
+`STATUS: EXPERIMENTAL` · `STREAM: SSE`
 
-> Minimal, fast interface for interacting with large language models — built around streaming and low-latency UX.
-
-Token streaming rendered in real-time via Server-Sent Events — responses appear character by character with no reflow or layout shift. Context window managed client-side using a lightweight token estimator. Conversation history serialized per-session. Performance targets: sub-2s LCP, zero CLS on stream render.
+Token streaming via SSE. No reflow, no layout shift, no waiting. Context managed client-side with a lightweight token estimator. Target: sub-2s LCP, zero CLS on stream render.
 
 ```
 Stack: Next.js · TypeScript · Tailwind CSS · SSE · OpenAI API · Vercel
 ```
 
----
-
-## `> cat engineering.focus`
-
-```
-Domain                    Approach
-──────────────────────    ─────────────────────────────────────────────────────────
-Event-Driven Systems      Async pipelines decoupled from the request cycle — durable by default
-Real-Time Infrastructure  WebSocket gateways, SSE streams, and pub/sub at the transport layer
-Distributed Systems       Explicit consistency trade-offs — partition tolerance by design
-Microservices             Domain-bounded services, independent deployments, contract-tested APIs
-Scalability               Stateless compute, shared-nothing data, horizontal scale paths built in
-```
-
-Failure modes are designed before features ship. Idempotency, dead-letter queues, and retry budgets are first-class architecture concerns — not patches applied after incidents.
+────────────────────────────────────────────────────────────
 
 ---
 
-## `> cat stack.config`
+> **`[MODULE: REQUEST_FLOW]`**
+
+```
+  CLIENT
+    │
+    ▼
+  ┌─────────────────┐
+  │   API Gateway   │  ← rate limiting · auth · request validation
+  └────────┬────────┘
+           │
+     ┌─────┴──────┐
+     ▼            ▼
+ ┌────────┐  ┌──────────────┐
+ │  REST  │  │  WebSocket   │  ← persistent · bi-directional
+ └───┬────┘  └──────┬───────┘
+     │               │
+     ▼               ▼
+  ┌──────────────────────────┐
+  │     Service Layer        │  ← domain logic · state machines · RBAC
+  └──────────┬───────────────┘
+             │
+     ┌───────┴────────┐
+     ▼                ▼
+ ┌──────────┐    ┌──────────┐
+ │ Postgres │    │  Redis   │  ← cache · pub/sub · job queues
+ └──────────┘    └──────────┘
+             │
+             ▼
+  ┌──────────────────────┐
+  │   Background Workers │  ← Celery · retry budgets · dead-letter
+  └──────────────────────┘
+```
+
+---
+
+> **`[MODULE: ARCHITECTURE]`**
+
+```
+Event-Driven Systems      async pipelines, durable by default — never blocking the request cycle
+Real-Time Infrastructure  WS gateways, SSE streams, pub/sub at the transport layer
+Distributed Systems       explicit consistency trade-offs — partition tolerance by design
+Microservices             domain-bounded, independently deployed, contract-tested
+Scalability               stateless compute · shared-nothing data · horizontal paths built in
+```
+
+*Incidents are expensive. Designing for failure is not.*
+
+---
+
+> **`[MODULE: LIVE_TRACE]`**
+
+```log
+[09:14:02] BOOT     loading tenant isolation middleware         ✓
+[09:14:02] BOOT     registering websocket event handlers        ✓
+[09:14:03] BOOT     connecting redis pub/sub channel            ✓
+[09:14:03] BOOT     starting celery workers (concurrency=4)     ✓
+[09:14:04] INFO     database pool initialized (max=20)
+[09:14:04] INFO     JWT validation layer active
+[09:14:05] WARN     p99 latency spike detected on /orders       → investigating
+[09:14:06] INFO     dead-letter queue flushed — 3 jobs retried  ✓
+[09:14:07] INFO     all systems nominal. accepting traffic.
+```
+
+---
+
+> **`[MODULE: STACK_CONFIG]`**
 
 **Languages**
 
@@ -122,22 +193,20 @@ Failure modes are designed before features ship. Idempotency, dead-letter queues
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![WebSockets](https://img.shields.io/badge/WebSockets-010101?style=flat-square&logo=socketdotio&logoColor=white)
 ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
-![REST](https://img.shields.io/badge/REST_API-FF6C37?style=flat-square&logo=postman&logoColor=white)
 
-**Databases**
+**Data Layer**
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
 
-**Cloud & DevOps**
+**Infra & DevOps**
 
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat-square&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
 **AI / LLM**
 
@@ -148,13 +217,13 @@ Failure modes are designed before features ship. Idempotency, dead-letter queues
 **Frontend**
 
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 
 ---
 
-## `> github --stats`
+> **`[MODULE: GITHUB_STATS]`**
 
 <div align="center">
 
@@ -171,13 +240,24 @@ Failure modes are designed before features ship. Idempotency, dead-letter queues
 
 ---
 
-## `> git log --graph`
+> **`[MODULE: CONTRIBUTION_GRAPH]`**
 
 <div align="center">
-
 <img src="https://github.com/Pratham8141/Pratham8141/blob/output/github-contribution-grid-snake-dark.svg" alt="contribution graph" />
-
 </div>
+
+---
+
+> **`[MODULE: CORE_PRINCIPLES]`**
+
+```
+01.  systems fail          →  design for it before writing a single line
+02.  latency is a feature  →  p99 matters as much as p50
+03.  scale is planned      →  not added after the incident
+04.  trust no client       →  auth and validation live at the server. always.
+05.  async by default      →  decouple what doesn't need to be coupled
+06.  idempotency first     →  retries happen. build for them.
+```
 
 ---
 
@@ -186,7 +266,8 @@ Failure modes are designed before features ship. Idempotency, dead-letter queues
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,100:0D1117&height=80&section=footer&reversal=true" width="100%"/>
 
 ```
-Building systems that scale.
+> session terminated.
+> systems running. stack holding. building continues.
 ```
 
 </div>
