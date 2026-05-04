@@ -1,43 +1,77 @@
-<svg width="800" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg">
-
-  <style>
-    .text {
-      font-family: monospace;
-      fill: #00D9FF;
-      font-size: 16px;
-    }
-  </style>
-
-  <rect width="100%" height="100%" fill="#0D1117"/>
-
-  <text x="10" y="30" class="text">
-    <tspan>booting pratham.sharma...</tspan>
-    <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
+<svg width="900" height="190" viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1120;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1628;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Terminal background -->
+  <rect width="900" height="190" rx="6" fill="url(#termBg)" stroke="#00D9FF" stroke-opacity="0.2" stroke-width="1"/>
+  <rect x="1" y="1" width="898" height="188" rx="5" fill="none" stroke="#1a2a3a" stroke-width="1"/>
+  <!-- Header bar -->
+  <rect width="900" height="28" rx="6" fill="#0f1a2e"/>
+  <rect y="22" width="900" height="6" fill="#0f1a2e"/>
+  <circle cx="18" cy="14" r="5" fill="#ff5f57" opacity="0.8"/>
+  <circle cx="36" cy="14" r="5" fill="#febc2e" opacity="0.8"/>
+  <circle cx="54" cy="14" r="5" fill="#28c840" opacity="0.8"/>
+  <text x="450" y="18" font-family="'Courier New', monospace" font-size="10" fill="#00D9FF" text-anchor="middle" opacity="0.6" letter-spacing="2">SYSTEM BOOT</text>
+  <!-- Terminal dot indicator -->
+  <circle cx="878" cy="14" r="4" fill="#00D9FF" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Line 1 -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#4a6a7a" opacity="0.8">
+    <tspan x="24" y="58">[00:00:00]</tspan>
   </text>
-
-  <text x="10" y="55" class="text">
-    <tspan>loading modules: saas, chat, ai...</tspan>
-    <animate attributeName="opacity" values="0;1" begin="0.5s" dur="0.5s" fill="freeze"/>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#c0cfe0" opacity="0.9">
+    <tspan x="110" y="58">Initializing system...</tspan>
   </text>
-
-  <text x="10" y="80" class="text">
-    <tspan>initializing real-time systems...</tspan>
-    <animate attributeName="opacity" values="0;1" begin="1s" dur="0.5s" fill="freeze"/>
+  <!-- Line 2 -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#4a6a7a" opacity="0.8">
+    <tspan x="24" y="78">[00:00:00]</tspan>
   </text>
-
-  <text x="10" y="105" class="text">
-    <tspan>redis: online</tspan>
-    <animate attributeName="opacity" values="0;1" begin="1.5s" dur="0.5s" fill="freeze"/>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#c0cfe0" opacity="0.9">
+    <tspan x="110" y="78">Loading modules</tspan>
   </text>
-
-  <text x="10" y="130" class="text">
-    <tspan>websocket: active</tspan>
-    <animate attributeName="opacity" values="0;1" begin="2s" dur="0.5s" fill="freeze"/>
+  <!-- Progress bar -->
+  <rect x="270" y="67" width="200" height="10" rx="2" fill="#0f1a2e" stroke="#00D9FF" stroke-opacity="0.3" stroke-width="1"/>
+  <rect x="271" y="68" width="198" height="8" rx="1" fill="#00D9FF" opacity="0.7"/>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#00D9FF" opacity="0.9">
+    <tspan x="478" y="78">100%</tspan>
   </text>
-
-  <text x="10" y="155" class="text">
-    <tspan>system ready.</tspan>
-    <animate attributeName="opacity" values="0;1" begin="2.5s" dur="0.5s" fill="freeze"/>
+  <!-- Line 3 -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#4a6a7a" opacity="0.8">
+    <tspan x="24" y="98">[00:00:00]</tspan>
   </text>
-
+  <text font-family="'Courier New', monospace" font-size="12" fill="#c0cfe0" opacity="0.9">
+    <tspan x="110" y="98">Connecting to core services...</tspan>
+  </text>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#00ff88">
+    <tspan x="355" y="98"> OK</tspan>
+  </text>
+  <!-- Line 4 -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#4a6a7a" opacity="0.8">
+    <tspan x="24" y="118">[00:00:00]</tspan>
+  </text>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#c0cfe0" opacity="0.9">
+    <tspan x="110" y="118">Starting system architecture...</tspan>
+  </text>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#00ff88">
+    <tspan x="362" y="118"> OK</tspan>
+  </text>
+  <!-- Line 5 -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#4a6a7a" opacity="0.8">
+    <tspan x="24" y="138">[00:00:00]</tspan>
+  </text>
+  <text font-family="'Courier New', monospace" font-size="12" fill="#c0cfe0" opacity="0.9">
+    <tspan x="110" y="138">System online. Ready.</tspan>
+  </text>
+  <!-- Prompt line -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#00D9FF" opacity="0.9">
+    <tspan x="24" y="162">user@pratham:~$</tspan>
+  </text>
+  <!-- Blinking cursor -->
+  <rect x="156" y="150" width="9" height="14" fill="#00D9FF" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
 </svg>
