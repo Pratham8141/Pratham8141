@@ -66,19 +66,45 @@ uptime   : always shipping
 
 <br/>
 
-### 📊 &nbsp;`stats`
-
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Pratham8141&show_icons=true&theme=dark&bg_color=0d1117&title_color=00D9FF&icon_color=00D9FF&text_color=c9d1d9&border_color=21262d&hide_border=false&rank_icon=github" alt="GitHub Stats"/>
-&nbsp;&nbsp;
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pratham8141&layout=compact&theme=dark&bg_color=0d1117&title_color=00D9FF&text_color=c9d1d9&border_color=21262d&hide_border=false" alt="Top Languages"/>
+<img src="assets/metrics.svg" width="100%" alt="System Metrics"/>
 
 </div>
 
 <br/>
 
-### 🐍 &nbsp;`contribution.graph`
+### 📊 &nbsp;`github.stats`
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Pratham8141&show_icons=true&theme=dark&bg_color=0d1117&title_color=00D9FF&icon_color=00D9FF&text_color=c9d1d9&border_color=21262d&cache_seconds=1800&rank_icon=github&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+&nbsp;
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pratham8141&layout=compact&theme=dark&bg_color=0d1117&title_color=00D9FF&text_color=c9d1d9&border_color=21262d&cache_seconds=1800&langs_count=6" alt="Top Languages"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=Pratham8141&theme=dark&background=0d1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=c9d1d9&dates=8899aa&border=21262d&hide_border=false" alt="GitHub Streak" height="150"/>
+
+</div>
+
+<br/>
+
+### 📈 &nbsp;`contribution.graph`
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Pratham8141&theme=github-compact&bg_color=0d1117&color=00D9FF&line=00D9FF&point=ffffff&area=true&area_color=00D9FF&hide_border=true" width="100%" alt="Contribution Graph"/>
+
+</div>
+
+<br/>
+
+### 🐍 &nbsp;`contribution.snake`
 
 <div align="center">
 
@@ -90,10 +116,3 @@ uptime   : always shipping
 
 </div>
 
-<br/>
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Courier+New&size=14&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=systems+running.+building+continues." alt="Footer"/>
-
-</div>
